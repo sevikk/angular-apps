@@ -1,0 +1,55 @@
+<div class="filter_block">
+  <div class="filter_block_box">
+    <h3 class="filter_block_currency_title">Валюта</h3>
+    <div class="filter_block_currency">
+      <div class="filter_block_currency_item"
+           [class.active]="selectedCurrencyUSD"
+           (click)="onCurrencyClick($event, 'USD')">
+        USD
+      </div>
+      <div class="filter_block_currency_item"
+           [class.active]="selectedCurrencyEUR"
+           (click)="onCurrencyClick($event, 'EUR')">
+        EUR
+      </div>
+      <div class="filter_block_currency_item"
+           [class.active]="selectedCurrencyRUB"
+           (click)="onCurrencyClick($event, 'RUB')">
+        RUB
+      </div>
+    </div>
+  </div>
+  <div class="filter_stops">
+    <div class="filter_block_stops">
+      <h3 class="filter_block_currency_title">Количество пересадок</h3>
+      <div class="filter_block_stops_box">
+        <div class="filter_block_stops_label">
+          <input type="checkbox" id='all' [checked]="allChecked" (change)='onChangeFilteringTicketsAll()'>
+          <label for="all">Все</label>
+        </div>
+        <div class="filter_block_stops_label">
+          <input type="checkbox" id='zero' (change)='onChangeFilteringTickets($event, 0)'>
+          <label for="zero">Без пересадок</label>
+          <span (click)="onOnlyClickButton(0)" class="filter_block_stops_box-only">только</span>
+        </div>
+        <div class="filter_block_stops_label">
+          <input type="checkbox" id='one' (change)='onChangeFilteringTickets($event, 1)'>
+          <label for="one">1 пересадка</label>
+          <span (click)="onOnlyClickButton(1)" class="filter_block_stops_box-only">только</span>
+        </div>
+        <div class="filter_block_stops_label">
+          <input type="checkbox" id='two' (change)='onChangeFilteringTickets($event, 2)'>
+          <label for="two">2 пересадки</label>
+          <span (click)="onOnlyClickButton(2)" class="filter_block_stops_box-only">только</span>
+        </div>
+        <div class="filter_block_stops_label">
+          <input type="checkbox" id='three' (change)='onChangeFilteringTickets($event, 3)'>
+          <label for="three">3 пересадки</label>
+          <span (click)="onOnlyClickButton(3)" class="filter_block_stops_box-only">только</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+

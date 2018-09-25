@@ -1,0 +1,15 @@
+@import "../../../common-styles/variables.scss";
+
+
+main {
+  min-height: 100vh;
+  background-color: $bgColor;
+}
+
+.logo_block {
+  text-align: center;
+}
+
+.content_block {
+  display: flex;
+}

@@ -1,0 +1,27 @@
+<div class="tickets">
+  <div class="">
+    <div *ngFor='let ticket of tickets$ | async' class="tickets_box">
+      <div class="tickets_box_airline_block">
+        <img src="./assets/images/logoAirlines.png" alt="">
+
+        <button class="tickets_box_airline_block_buy" type="button"> Купить <br/> за {{ changeCurrency(ticket.currency, ticket.price) }}
+        </button>
+      </div>
+      <div class="tickets_box_info">
+        <div class="tickets_box_info_from">
+          <h3 class="tickets_box_info-time">{{ ticket.departure_time }}</h3>
+          <h5 class="tickets_box_info-origin"> {{ticket.origin }}, {{ticket.origin_name }} </h5>
+          <h5 class="tickets_box_info-date"> {{ticket.departure_date | date:'d MMM yyyy, EEEEEE'}} </h5>
+        </div>
+        <div class="tickets_box_info_stops">
+          <span class="tickets_box_info_stops-title">{{ showCurrentStops(ticket.stops) }}</span>
+        </div>
+        <div class="tickets_box_info_to">
+          <h3 class="tickets_box_info-time">{{ ticket.arrival_time }}</h3>
+          <h5 class="tickets_box_info-origin">{{ticket.destination_name }}, {{ticket.destination }} </h5>
+          <h5 class="tickets_box_info-date"> {{ticket.arrival_date | date:'d MMM yyyy, EEEEEE'}} </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

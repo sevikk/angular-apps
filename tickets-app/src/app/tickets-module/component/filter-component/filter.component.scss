@@ -1,0 +1,143 @@
+@import "../../../../common-styles/variables";
+
+.filter_block {
+  background-color: $white;
+  border-radius: 6px;
+  box-shadow: 0 0 11px -4px black;
+}
+
+.filter_block_box {
+  padding: 20px;
+}
+
+.filter_stops .filter_block_currency_title,
+.filter_stops .filter_block_stops_label {
+  padding-left: 20px;
+}
+
+.filter_stops {
+  padding-bottom: 20px;
+}
+
+.filter_block_currency_title {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+
+.filter_block_currency {
+  display: flex;
+  border-radius: 6px;
+
+}
+
+.filter_block_currency_item {
+  width: 33%;
+  padding: 10px;
+  color: $blue;
+  text-align: center;
+  border: 1px solid $borderCurrency;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.filter_block_currency_item.active {
+  background-color: $blue;
+  color: $white;
+  border-color: $blue;
+}
+
+.filter_block_currency_item:hover {
+  border-color: $blue;
+  color: $blue;
+  transition: .2s;
+  background-color: $bgHover;
+}
+
+.filter_block_currency div.filter_block_currency_item:first-child {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+
+.filter_block_currency div.filter_block_currency_item:last-child {
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.filter_block_stops {
+  margin-top: 20px;
+}
+
+.filter_block_stops_box {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter_block_stops_label {
+  position: relative;
+  padding-top: 5px;
+}
+
+.filter_block_stops_box-only {
+  display: none;
+  position: absolute;
+  right: 27px;
+  top: 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: $blue;
+  //pointer-events: none;
+  cursor: pointer;
+}
+
+.filter_block_stops_label:hover {
+  background: $bgHover;
+}
+.filter_block_stops_label:hover .filter_block_stops_box-only {
+  display: block;
+}
+
+.filter_block_stops_label input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+.filter_block_stops_label label {
+  position: relative;
+  cursor: pointer;
+}
+
+.filter_block_stops_label label:before {
+  content:'';
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 1px solid $blue;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 5px;
+  border-radius: 4px;
+}
+
+.filter_block_stops_label input:checked + label:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 9px;
+  width: 6px;
+  height: 14px;
+  border: solid $blue;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+
