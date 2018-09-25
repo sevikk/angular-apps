@@ -1,0 +1,13 @@
+<div class="movie_block" *ngIf="getContent">
+    <span class="movie_name {{getStyle()}}" (change)="loadMovie()" (click)="show = !show; showStyle = !showStyle;">Movie: {{currentTitle}}</span>
+    <ul *ngIf="show" [@enterAnimation] class="movie_list {{getStyle()}}">
+        <li (click)="currentTitle = movieResult.title; show = !show; showStyle = !showStyle;"
+            *ngFor="let movieResult of movieResults " class="movie_item">{{ movieResult.title }}
+        </li>
+    </ul>
+    <span class="movie_block_clear " *ngIf="currentTitle" (click)="currentTitle = null">Clear</span>
+    <div *ngIf="errorMessage" class="alert alert-danger">
+        {{errorMessage}}
+    </div>
+</div>
+
