@@ -4,7 +4,7 @@ import {HttpClient} from '@angular/common/http';
 @Injectable()
 export class BaseService {
 
-  baseUrl = '../assets/tickets.json';
+  baseUrl = './assets/tickets.json';
 
   constructor(private http: HttpClient) { }
 
