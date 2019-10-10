@@ -22,7 +22,7 @@ export class TicketComponent implements OnInit {
   ngOnInit() {
   }
 
-  changeCurrency( currency: string = 'RUB', price: number ) {
+  changeCurrency( currency: string = 'UAH', price: number ) {
     return this.ticketService.changeCurrency(currency, price);
   }
 

@@ -23,7 +23,7 @@ export class TicketService {
     this.ticket$ = this._tickets.asObservable();
   }
 
-  changeCurrency( currency: string = 'RUB', price: number ) {
+  changeCurrency( currency: string = 'UAH', price: number ) {
     let cost = 0;
 
     switch (currency) {
@@ -77,7 +77,8 @@ export class TicketService {
   }
 
   private log(message: string) {
-    // this.messageService.add(`HeroService: ${message}`);
+    console.log(message);
+    
   }
 
 }
