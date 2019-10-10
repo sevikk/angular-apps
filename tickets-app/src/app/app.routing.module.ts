@@ -6,6 +6,7 @@ import { MainComponent } from './tickets-module/container/main.component';
 const routes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
   { path: 'main', component:  MainComponent},
+  { path: '**', redirectTo:  '/main'},
 ];
 
 
